@@ -25,7 +25,6 @@ export default function App() {
     const response = await api.post(`/repositories/${id}/like`);
 
     const repositoryLiked = response.data;
-    console.log(repositoryLiked);
     const repositoriesUpdate = repositories.map(repository => {
       if (repository.id === id) {
         return repositoryLiked;
